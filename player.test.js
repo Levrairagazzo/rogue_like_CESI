@@ -30,3 +30,21 @@ test('Player is dead', () => {
     player.alive = player.playerIsAlive();
     expect(player.alive).toBe(false);
 })
+test('Player takes damage', () => {
+    const player = new Player('Bob');
+    const currentHealth = player.health;
+    player.damageTaken(10);
+    expect(player.health).toBe(currentHealth - 10);
+})
+
+test('Player takes damage and dies', () => {
+    const player = new Player('Bob');
+    player.damageTaken(110);
+    expect(player.alive).toBe(false);
+})
+
+test('Player takes damage and doesnt die', () => {
+    const player = new Player('Bob');
+    player.damageTaken(90);
+    expect(player.alive).toBe(true);
+});
