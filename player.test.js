@@ -18,11 +18,11 @@ test('Player damage increased by 20', () => {
     player.improveDamage(20);
     expect(player.damage).toBe(currentDamage + 20);
 })
-test('Player health increased by 20', () => {
+test('Player health increased by 30', () => {
     const player = new Player('Bob');
     const currentHealth = player.health;
     player.healthPack();
-    expect(player.health).toBe(currentHealth + 20);
+    expect(player.health).toBe(currentHealth + 30);
 })
 test('Player is dead', () => {
     const player = new Player('Bob');
