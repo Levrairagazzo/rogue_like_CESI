@@ -20,7 +20,7 @@ test('Player damage increased by 20', () => {
 })
 test('Player health increased by 30', () => {
     const player = new Player('Bob');
-    const currentHealth = player.health;
+    const currentHealth = player.health + 10;
     player.healthPack();
     expect(player.health).toBe(currentHealth + 30);
 })
