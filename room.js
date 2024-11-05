@@ -4,7 +4,14 @@ class Room {
     constructor() {
         this.type = this.types[Math.floor(Math.random() * this.types.length)];
     }
+    changeType(type) {
+        if (this.types.includes(type)) {
+            this.type = type;
+        }
+        this.type = type;
+    }
 
+   
     enterRoom(player) {
         console.log('You have entered a room of type ' + this.type);
         if (this.type === 'ennemy') {

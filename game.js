@@ -61,5 +61,5 @@ async function playGame(currentPlayer) {
     }
 }
 
-playGame(player);
+// playGame(player);
 
